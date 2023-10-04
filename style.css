@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+*{    margin: 0;    padding: 0;}
+
+body{
+    background-image: url(/chill-valley-wallpaper.jpg);
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Montserrat;
+}
+p{
+    font-weight: 400;
+}
+ #um{
+    font-size: 1.5rem;
+    font-weight: 600;
+ }
+main{
+    background-color: transparent;
+    height: auto;
+    width: 320px;
+    backdrop-filter: blur(5px);
+    padding: 60px;
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    border-radius: 30px;
+    
+    
+}
+#main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+main form{
+    text-align: center;
+}
+#logo img{
+    width: 80px;
+    filter: invert();
+   margin-bottom: 2rem;
+    pointer-events: none;
+   
+    
+}
+#logo{
+    display: flex;
+    justify-content: center; 
+    
+}
+#title{
+    margin: 0 0 1.5rem 0;
+}
+
+/* inputs */
+form input{
+    height: 50px;
+    width: 80%;
+    color: white;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    font-family: Montserrat;
+    font-size: 1.1rem;
+    text-justify: distribute-all-lines;
+    
+}
+form input::placeholder{
+    color: white;
+    font-size: 0.8rem;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 5px;
+    font-family: Montserrat;
+    
+}
+input:focus::placeholder {
+    font-size: .8rem;
+    bottom: 30px;
+}
+form a{
+    text-decoration: none;
+    color: white;
+    text-decoration: underline;
+}
+form button{
+    height: 60px;
+    width: 60%;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: Montserrat;
+    background-color: rgba(255, 255, 255, 0.568);
+    transition: 0.3s background-color ease;
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+
+
+
+
+
+
+/* icons */
+
+#senha{
+    font-size: 1.8rem
+}
