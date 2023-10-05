@@ -1,4 +1,4 @@
-from flask import Flask, jsonify,request,Response, redirect, render_template
+from flask import Flask, jsonify,request
 from flask_cors import CORS, cross_origin
 from flask_mysqldb import MySQL
 
@@ -15,7 +15,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
     
 @app.route('/login', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def checkUserData2():
+def checkUserData():
     email = request.get_json()['email']
     password = request.get_json()['password']
     
@@ -26,19 +26,16 @@ def checkUserData2():
     cursor.close()
 
     if data is None:
-        userExists = 'false'
+        userExists = False
     else:
-        userExists = 'true'
+        userExists = True
     
-    if userExists == 'true':
-        return Response(status=201)
-    else: 
-        return Response(status=202)
+    return jsonify(UserExists = userExists)
     
 
 @app.route('/signup', methods=['POST'])
 @cross_origin(supports_credentials=True)
-def AddNewUser2():
+def AddNewUser():
     username = request.get_json()['username']
     email = request.get_json()['email']
     password = request.get_json()['password']
@@ -48,7 +45,7 @@ def AddNewUser2():
     mysql.connection.commit()
     cursor.close()
     
-    return Response(status=201)
+    return jsonify(added = True)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=3085)

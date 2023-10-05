@@ -22,12 +22,10 @@ async function fetchData() {
     mode: 'cors',
     cache: 'default',
 })
-.then(Request => {
-        if(Request.status == 201){
-            window.location.href = 'home.html'
-        }
-        else if(Request.status == 202){
-            document.write('Usuário ou senha incorretos')
+.then(response => response.json())
+    .then(response => {
+        if(response.userExists) {
+            window.location.href = 'home.html';
         }
     })   
 }

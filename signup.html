@@ -2,20 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="signup.js" async></script>
-    <title>Document</title>
+    <title>Tela de Registro</title>
 </head>
 <body>
-    <main>
-        <form id="form1">
-            <input type="text" name="username">
-            <input type="email">
-            <input type="password">
-            <button type="submit"></button>
-        </form>
-    </main>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="https://seeklogo.com/images/F/flask-logo-44C507ABB7-seeklogo.com.png" alt="Logo do Flask" class="flask-logo">
+            <h2>Crie uma conta</h2>
+            <p><span>Para acessar a comunidade FlaskMe</span></p>
+            <div id="processMessage"></div>
+            <form id="form1">
+                
+                <div class="input-container">
+                    <input type="text" placeholder=" Nome de usuário" class="white-placeholder" name="username" id="username">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-container">
+                    <input type="email" placeholder="Email" class="white-placeholder" name="email">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="input-container">
+                    <input type="password" placeholder="Senha" class="white-placeholder" name="password">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit">Registrar</button>
+            </form>
+            <p>Já possui uma conta? <a href="login.html" style="text-decoration: none; color: white; text-decoration: underline; " >Clique aqui</a></p>
+        </div>
+    </div>
 </body>
 </html>
